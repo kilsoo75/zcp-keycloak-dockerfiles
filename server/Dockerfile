@@ -15,6 +15,10 @@ RUN cd /opt/jboss/ && curl -L https://downloads.jboss.org/keycloak/$KEYCLOAK_VER
 
 ADD docker-entrypoint.sh /opt/jboss/
 
+# added for zcp dev environment
+RUN cd /opt/jboss/keycloak/standalone/configuration/ && mv standalone.xml standalone.xml.org
+ADD zcp/standalone.xml /opt/jboss/keycloak/standalone/configuration/standalone.xml
+
 ADD cli /opt/jboss/keycloak/cli
 RUN cd /opt/jboss/keycloak && bin/jboss-cli.sh --file=cli/standalone-configuration.cli && rm -rf /opt/jboss/keycloak/standalone/configuration/standalone_xml_history
 RUN cd /opt/jboss/keycloak && bin/jboss-cli.sh --file=cli/standalone-ha-configuration.cli && rm -rf /opt/jboss/keycloak/standalone/configuration/standalone_xml_history
