@@ -9,15 +9,18 @@ USER root
 
 RUN yum install -y epel-release && yum install -y jq && yum clean all
 
+# original
+#USER jboss
+#RUN cd /opt/jboss/ && curl -L https://downloads.jboss.org/keycloak/$KEYCLOAK_VERSION/keycloak-$KEYCLOAK_VERSION.tar.gz | tar zx && mv /opt/jboss/keycloak-$KEYCLOAK_VERSION /opt/jboss/keycloak
+
+# for zcp
+#ADD zcp/keycloak-$KEYCLOAK_VERSION.tar.gz /opt/jboss/keycloak-$KEYCLOAK_VERSION.tar.gz
+#RUN cd /opt/jboss/ && tar zx keycloak-$KEYCLOAK_VERSION.tar.gz && mv /opt/jboss/keycloak-$KEYCLOAK_VERSION /opt/jboss/keycloak
+ADD zcp/keycloak-$KEYCLOAK_VERSION /opt/jboss/keycloak
+RUN chown -Rf jboss.jboss /opt/jboss/keycloak
 USER jboss
 
-RUN cd /opt/jboss/ && curl -L https://downloads.jboss.org/keycloak/$KEYCLOAK_VERSION/keycloak-$KEYCLOAK_VERSION.tar.gz | tar zx && mv /opt/jboss/keycloak-$KEYCLOAK_VERSION /opt/jboss/keycloak
-
 ADD docker-entrypoint.sh /opt/jboss/
-
-# added for zcp dev environment
-RUN cd /opt/jboss/keycloak/standalone/configuration/ && mv standalone.xml standalone.xml.org
-ADD zcp/standalone.xml /opt/jboss/keycloak/standalone/configuration/standalone.xml
 
 ADD cli /opt/jboss/keycloak/cli
 RUN cd /opt/jboss/keycloak && bin/jboss-cli.sh --file=cli/standalone-configuration.cli && rm -rf /opt/jboss/keycloak/standalone/configuration/standalone_xml_history
