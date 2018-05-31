@@ -6,6 +6,6 @@
 		<p class="session-text__sm">로그인을 다시 진행해 주십시오.</p>
 	</div>
 	<div class="btn-wrap__center">
-        <button class="Button btn-login gray" onclick="location.href='${url.loginAction}'">로그인</button>
+		<button class="Button btn-login gray" onclick="location.href='${url.loginRestartFlowUrl}'">로그인</button>
     </div>
 </@layout.registrationLayout>
