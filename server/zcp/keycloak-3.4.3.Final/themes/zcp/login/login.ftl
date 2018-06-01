@@ -14,17 +14,17 @@
                     </dt>
                     <dd>
                         <#if usernameEditDisabled??>
-                            <input id="username" name="username" value="${(login.username!'')}" class="Textinput" placeholder="" disabled>
+                            <input tabindex="1" id="username" name="username" value="${(login.username!'')}" class="Textinput" placeholder="" disabled>
                         <#else>
-                            <input id="username" name="username" value="${(login.username!'')}" class="Textinput" placeholder="" autofocus autocomplete="off">
+                            <input tabindex="1" id="username" name="username" value="${(login.username!'')}" class="Textinput" placeholder="" autofocus autocomplete="off">
                         </#if>
                     </dd>
                     <dt>비밀번호</dt>
-                    <dd><input id="password" name="password" class="Textinput" type="password" placeholder="" autocomplete="off"></dd>
+                    <dd><input tabindex="2" id="password" name="password" class="Textinput" type="password" placeholder="" autocomplete="off"></dd>
 
                     <#if realm.rememberMe && !usernameEditDisabled??>
                         <dd class="idsave"><label class="ImageCheckbox" id="checkTest03">
-                                <input class="Checkbox" type="checkbox" name="chk1" value = "check1" checked="checked">
+                                <input tabindex="3" class="Checkbox" type="checkbox" name="chk1" value = "check1" checked="checked">
                                 아이디저장
                             </label>
                         </dd>
@@ -37,7 +37,7 @@
             </fieldset>
         </form>
     </div>
-    <div class="btn-wrap__center"><button class="Button btn-login" onclick="$('#kc-form-login').submit();">로그인</button></div>
+    <div class="btn-wrap__center"><button tabindex="4" class="Button btn-login" onclick="$('#kc-form-login').submit();">로그인</button></div>
     <!--//login contents-->
     <div class="login-menu">
         <ul class="login-list">

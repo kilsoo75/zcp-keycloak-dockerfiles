@@ -1,22 +1,23 @@
 <#import "template.ftl" as layout>
 <@layout.registrationLayout displayMessage=false; section>
-    <#if section = "title">
-    ${message.summary}
-    <#elseif section = "header">
-    ${message.summary}
-    <#elseif section = "form">
-    <div id="kc-info-message">
-        <p class="instruction">${message.summary}<#if requiredActions??><#list requiredActions>: <b><#items as reqActionItem>${msg("requiredAction.${reqActionItem}")}<#sep>, </#items></b></#list><#else></#if></p>
-        <#if skipLink??>
+    <div class="login-box">
+        <p class="session-text__lg">${message.summary}</p>
+        <#if requiredActions??>
+            <#list requiredActions>:
+                <p class="session-text__sm"><b><#items as reqActionItem>${msg("requiredAction.${reqActionItem}")}<#sep>, </#items></b></p>
+            </#list>
         <#else>
-            <#if pageRedirectUri??>
-                <p><a href="${pageRedirectUri}">${msg("backToApplication")?no_esc}</a></p>
-            <#elseif actionUri??>
-                <p><a href="${actionUri}">${msg("proceedWithAction")?no_esc}</a></p>
-            <#elseif client.baseUrl??>
-                <p><a href="${client.baseUrl}">${msg("backToApplication")?no_esc}</a></p>
-            </#if>
         </#if>
     </div>
+
+    <#if skipLink??>
+    <#else>
+        <#if pageRedirectUri??>
+            <div class="btn-wrap__center"><button class="Button btn-login gray" onclick="location.href='${pageRedirectUri}'">${msg("backToApplication")?no_esc}</button></div>
+        <#elseif actionUri??>
+            <div class="btn-wrap__center"><button class="Button btn-login gray" onclick="location.href='${actionUri}'">${msg("proceedWithAction")?no_esc}</button></div>
+        <#elseif client.baseUrl??>
+            <div class="btn-wrap__center"><button class="Button btn-login gray" onclick="location.href='${client.baseUrl}'">${msg("backToApplication")?no_esc}</button></div>
+        </#if>
     </#if>
 </@layout.registrationLayout>

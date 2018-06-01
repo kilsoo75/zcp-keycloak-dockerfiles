@@ -10,6 +10,7 @@
         </div>
     </div>
     <div class="btn-wrap__center">
+        <button class="Button btn-login gray" onclick="location.href='${url.loginRestartFlowUrl}'">로그인</button>
         <button class="Button btn-login gray" onclick="location.href='${url.loginAction}'">재발송 요청</button>
     </div>
 </@layout.registrationLayout>

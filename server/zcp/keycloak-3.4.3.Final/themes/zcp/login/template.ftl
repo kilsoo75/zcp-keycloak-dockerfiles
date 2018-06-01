@@ -35,7 +35,7 @@
     <div class="cp-wrapper">
     	<!-- header -->
     	<header class="cp-header">
-    		<h1 class="logo" onclick="location.href='https://console.cloudzcp.io/k8s-login'"><img src="${url.resourcesPath}/images/cloudzcp-logo.png" alt="CLOUD Z Container Platform"></h1>
+    		<h1 class="logo"><img src="${url.resourcesPath}/images/cloudzcp-logo.png" alt="CLOUD Z Container Platform" onclick="location.href='https://console.cloudzcp.io/k8s-login'"></h1>
     	</header>
     	<!-- //header -->
     	<!-- main-contents -->

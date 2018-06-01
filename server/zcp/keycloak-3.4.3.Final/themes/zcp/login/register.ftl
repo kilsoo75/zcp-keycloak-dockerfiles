@@ -20,7 +20,7 @@
                             <tr>
 								<th><strong class="astertisk">*</strong>아이디</th>
 								<td>
-                                    <input type="text" id="username"  name="username" value="${(register.formData.username!'')}" autocomplete="username" class="Textinput" placeholder="" data-validation-rule="{required:true}" data-validation-message="{required:'아이디를 입력해주세요.'}">
+                                    <input type="text" id="username" name="username" value="${(register.formData.username!'')}" autocomplete="username" class="Textinput" placeholder="" data-validation-rule="{required:true}" data-validation-message="{required:'아이디를 입력해 주세요.'}">
                                     <p class="color-red" data-for="username"></p>
                                 </td>
 							</tr>
@@ -29,14 +29,14 @@
                             <tr>
                                 <th><strong class="astertisk">*</strong>성</th>
                                 <td>
-                                    <input type="text" id="firstName" name="firstName" value="${(register.formData.firstName!'')}" class="Textinput" placeholder="" data-validation-rule="{required:true}" data-validation-message="{required:'성을 입력해주세요.'}">
+                                    <input type="text" id="firstName" name="firstName" value="${(register.formData.firstName!'')}" class="Textinput" placeholder="" data-validation-rule="{required:true}" data-validation-message="{required:'성을 입력해 주세요.'}">
                                     <p class="color-red" data-for="firstName"></p>
                                 </td>
                             </tr>
                             <tr >
                                 <th><strong class="astertisk">*</strong>이름</th>
                                 <td>
-                                    <input type="text" id="lastName" name="lastName" value="${(register.formData.lastName!'')}" class="Textinput" placeholder="" data-validation-rule="{required:true}" data-validation-message="{required:'이름을 입력해주세요.'}">
+                                    <input type="text" id="lastName" name="lastName" value="${(register.formData.lastName!'')}" class="Textinput" placeholder="" data-validation-rule="{required:true}" data-validation-message="{required:'이름을 입력해 주세요.'}">
                                     <p class="color-red" data-for="lastName"></p>
                                 </td>
                             </tr>
@@ -52,7 +52,7 @@
                             <tr>
                                 <th><strong class="astertisk">*</strong>비밀번호</th>
                                 <td>
-                                    <input type="password" id="password" name="password" autocomplete="new-password" class="Textinput" placeholder="" data-validation-rule="{required:true, rangelength:[6,8], numalpha:true}" data-validation-message="{required:'비밀번호를 입력해 주세요.'}">
+                                    <input type="password" id="password" name="password" autocomplete="new-password" class="Textinput" placeholder="" data-validation-rule="{required:true, rangelength:[6,12], numalpha:true}" data-validation-message="{required:'비밀번호를 입력해 주세요.'}">
                                     <p class="color-red" data-for="password"></p>
                                 </td>
                             </tr>
