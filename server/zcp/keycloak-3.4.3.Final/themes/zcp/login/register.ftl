@@ -59,8 +59,8 @@
                             <tr>
                                 <th>비밀번호 확인</th>
                                 <td>
-                                    <input type="password" id="password-confirm" name="password-confirm" class="Textinput" >
-                                    <p class="color-red" id="password_valid"></p>
+                                    <input type="password" id="password-confirm" name="password-confirm" class="Textinput" data-validation-rule="{passwordEqual:'testing'}"  data-validation-message="{passwordEqual:'두개의 비밀번호가 일치하지 않습니다.'}">
+                                    <p class="color-red" data-for="password-confirm"></p>
                                 </td>
                             </tr>
                             </#if>
@@ -79,4 +79,20 @@
         <button class="Button btn-login gray" onclick="location.href='${url.loginUrl}'">취소</button>
         <button class="Button btn-login" id="btnRegister" onclick="$('#kc-register-form').submit();">가입하기</button>
     </div>
+
+    <script type="text/javascript">
+        $.alopex.page(function() {
+            this.init = function(id, param) {
+                Validator.addMethod('passwordEqual', function(element, value, param) {
+                    var password = $("#password").val();
+                    if (value === password) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+            };
+        });
+    </script>
+
 </@layout.registrationLayout>

@@ -61,4 +61,22 @@
             </li>
         </ul>
     </div>
+
+    <script type="text/javascript">
+        $.alopex.page(function() {
+            this.init = function(id, param) {
+                $("#password").keyup(function(e) {
+                    if(e.keyCode == 13) {
+                        var username = $.trim($('#username').val());
+                        var password = $.trim($('#password').val());
+
+                        if (username.length !==0 && password.length !== 0) {
+                            $('#kc-form-login').submit();
+                        }
+                    }
+                });
+            };
+        });
+    </script>
+
 </@layout.registrationLayout>
