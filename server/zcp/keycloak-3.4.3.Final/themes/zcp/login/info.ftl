@@ -1,5 +1,6 @@
 <#import "template.ftl" as layout>
 <@layout.registrationLayout displayMessage=false; section>
+    <h2 class="login-title">정보</h2>
     <div class="login-box">
         <p class="session-text__lg">${message.summary}</p>
         <#if requiredActions??>
@@ -11,6 +12,7 @@
     </div>
 
     <#if skipLink??>
+    
     <#else>
         <#if pageRedirectUri??>
             <div class="btn-wrap__center"><button class="Button btn-login gray" onclick="location.href='${pageRedirectUri}'">${msg("backToApplication")?no_esc}</button></div>

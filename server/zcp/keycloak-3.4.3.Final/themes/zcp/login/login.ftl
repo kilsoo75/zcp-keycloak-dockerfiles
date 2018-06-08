@@ -7,7 +7,7 @@
             <fieldset>
                 <dl class="login-form">
                     <dt>
-                        이메일
+                        아이디
                         <!--
                         <#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if>
                         -->

@@ -53,5 +53,47 @@ $a.page(function(){
 				$(user).removeClass('close');
 			}
 		});
+
+		//on off button
+		var onoff = $('.onoff-wrap > button');
+		$(onoff).click(function(e){
+			e.preventDefault();
+			if($(this).hasClass('btn-on')) {
+				$(this).removeClass('btn-on').addClass('btn-off');
+				$(this).text('OFF');
+			} else {
+				$(this).removeClass('btn-off').addClass('btn-on');
+				$(this).text('ON');
+			}
+		})
+
+		//popup
+		$('#pop-temp1').click( function() {
+		    $a.popup({
+		        url: "zcp-pop01.html",
+		        iframe: false,  // default 는 true
+		        width: 826,
+		        height: 480,
+		        title : "패키지 삭제",
+		    });
+		});
+		$('#pop-temp2').click( function() {
+		    $a.popup({
+		        url: "zcp-pop02.html",
+		        iframe: false,  // default 는 true
+		        width: 826,
+		        height: 480,
+		        title : "패키지 삭제",
+		    });
+		});
+		$('#pop-temp3').click( function() {
+		    $a.popup({
+		        url: "zcp-pop03.html",
+		        iframe: false,  // default 는 true
+		        width: 826,
+		        height: 480,
+		        title : "오류 데이터 목록",
+		    });
+		});
 	}
 });
