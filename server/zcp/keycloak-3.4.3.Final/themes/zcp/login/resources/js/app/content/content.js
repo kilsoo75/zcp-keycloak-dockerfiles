@@ -2,12 +2,12 @@
 function registerValidate() {
     var usernameValid = $('#username').validate();
     var firstNameValid = $('#firstName').validate();
-    var lastNameValid = $('#lastName').validate();
     var emailValid = $('#email').validate();
     var passwordValid = $('#password').validate();
     var passwordConfirmValid = $('#password-confirm').validate();
+    $('#lastName').val($('#firstName').val());
 
-    if (usernameValid && usernameValid  && firstNameValid && lastNameValid && emailValid && passwordValid && passwordConfirmValid) {
+    if (usernameValid && usernameValid  && firstNameValid && emailValid && passwordValid && passwordConfirmValid) {
         return true;
     } else {
         return false;
@@ -17,10 +17,10 @@ function registerValidate() {
 function loginUpdateProfileValidate() {
     var usernameValid = $('#username').validate();
     var firstNameValid = $('#firstName').validate();
-    var lastNameValid = $('#lastName').validate();
     var emailValid = $('#email').validate();
+    $('#lastName').val($('#firstName').val());
 
-    if (usernameValid && usernameValid  && firstNameValid && lastNameValid && emailValid) {
+    if (usernameValid && firstNameValid && emailValid) {
         return true;
     } else {
         return false;

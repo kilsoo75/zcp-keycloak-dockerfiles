@@ -22,6 +22,6 @@
     </div>
     <div class="btn-wrap__center">
         <button class="Button btn-login gray" name="cancel" id="kc-cancel" onclick="location.href='${url.loginRestartFlowUrl}'">취소</button>
-        <button class="Button btn-login" name="login" id="kc-login" onclick="$('#kc-totp-login-form').submit();">로그인</button>
+        <button class="Button btn-login" name="login" id="kc-login" onclick="$('#kc-totp-login-form').submit();">확인</button>
     </div>
 </@layout.registrationLayout>

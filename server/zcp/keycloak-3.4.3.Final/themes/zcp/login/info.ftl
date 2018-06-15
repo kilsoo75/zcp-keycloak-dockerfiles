@@ -12,7 +12,7 @@
     </div>
 
     <#if skipLink??>
-    
+        <div class="btn-wrap__center"><button class="Button btn-login gray" onclick="location.href='${pageRedirectUri}'">로그인</button></div>
     <#else>
         <#if pageRedirectUri??>
             <div class="btn-wrap__center"><button class="Button btn-login gray" onclick="location.href='${pageRedirectUri}'">${msg("backToApplication")?no_esc}</button></div>

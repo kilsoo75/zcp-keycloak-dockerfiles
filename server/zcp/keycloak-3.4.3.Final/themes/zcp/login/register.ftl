@@ -9,6 +9,8 @@
         </div>
         <div class="member-form">
             <form id="kc-register-form" method="post" action="${url.registrationAction}" onsubmit="return registerValidate();">
+                <input type="hidden" id="lastName" name="lastName" value="${(register.formData.lastName!'')}" >
+
                 <fieldset>
                     <table class="Table Form-type member-tbl">
                         <colgroup>
@@ -27,17 +29,10 @@
                             </#if>
 
                             <tr>
-                                <th><strong class="astertisk">*</strong>성</th>
-                                <td>
-                                    <input type="text" id="firstName" name="firstName" value="${(register.formData.firstName!'')}" class="Textinput" placeholder="" data-validation-rule="{required:true}" data-validation-message="{required:'성을 입력해 주세요.'}">
-                                    <p class="color-red" data-for="firstName"></p>
-                                </td>
-                            </tr>
-                            <tr >
                                 <th><strong class="astertisk">*</strong>이름</th>
                                 <td>
-                                    <input type="text" id="lastName" name="lastName" value="${(register.formData.lastName!'')}" class="Textinput" placeholder="" data-validation-rule="{required:true}" data-validation-message="{required:'이름을 입력해 주세요.'}">
-                                    <p class="color-red" data-for="lastName"></p>
+                                    <input type="text" id="firstName" name="firstName" value="${(register.formData.firstName!'')}" class="Textinput" placeholder="" data-validation-rule="{required:true}" data-validation-message="{required:'이름을 입력해 주세요.'}">
+                                    <p class="color-red" data-for="firstName"></p>
                                 </td>
                             </tr>
                             <tr>
@@ -59,7 +54,7 @@
                             <tr>
                                 <th>비밀번호 확인</th>
                                 <td>
-                                    <input type="password" id="password-confirm" name="password-confirm" class="Textinput" data-validation-rule="{passwordEqual:'testing'}"  data-validation-message="{passwordEqual:'두개의 비밀번호가 일치하지 않습니다.'}">
+                                    <input type="password" id="password-confirm" name="password-confirm" class="Textinput" data-validation-rule="{required:true, passwordEqual:'testing'}"  data-validation-message="{required:'비밀번호 확인을 입력해 주세요.', passwordEqual:'두개의 비밀번호가 일치하지 않습니다.'}">
                                     <p class="color-red" data-for="password-confirm"></p>
                                 </td>
                             </tr>

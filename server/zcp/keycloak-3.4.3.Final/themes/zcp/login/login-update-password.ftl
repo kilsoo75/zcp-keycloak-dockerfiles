@@ -22,7 +22,7 @@
                             <tr>
 								<th>비밀번호 확인</th>
 								<td>
-                                    <input type="password" id="password-confirm" name="password-confirm" class="Textinput" autocomplete="new-password" data-validation-rule="{passwordEqual:'testing'}"  data-validation-message="{passwordEqual:'두개의 비밀번호가 일치하지 않습니다.'}">
+                                    <input type="password" id="password-confirm" name="password-confirm" class="Textinput" autocomplete="new-password" data-validation-rule="{required:true, passwordEqual:'testing'}"  data-validation-message="{required:'비밀번호 확인을 입력해 주세요.', passwordEqual:'두개의 비밀번호가 일치하지 않습니다.'}">
                                     <p class="color-red" data-for="password-confirm"></p>
                                 </td>
 							</tr>

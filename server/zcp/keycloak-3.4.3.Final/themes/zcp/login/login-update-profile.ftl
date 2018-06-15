@@ -5,6 +5,8 @@
 	<div class="member-box">
 		<div class="member-form">
 			<form id="kc-update-profile-form" action="${url.loginAction}" method="post" onsubmit="return loginUpdateProfileValidate();">
+                <input type="hidden" id="lastName" name="lastName" value="${(user.lastName!'')}" >
+
 				<fieldset>
 					<table class="Table Form-type member-tbl">
 						<colgroup>
@@ -30,20 +32,13 @@
                                 </td>
 							</tr>
                             <tr>
-								<th>성</th>
+								<th>이름</th>
 								<td>
-                                    <input type="text" id="firstName" name="firstName" value="${(user.firstName!'')}" class="Textinput" data-validation-rule="{required:true}" data-validation-message="{required:'성을 입력해 주세요.'}">
+                                    <input type="text" id="firstName" name="firstName" value="${(user.firstName!'')}" class="Textinput" data-validation-rule="{required:true}" data-validation-message="{required:'이름을 입력해 주세요.'}">
                                     <p class="color-red" data-for="firstName"></p>
                                 </td>
 							</tr>
-                            <tr>
-								<th>이름</th>
-								<td>
-                                    <input type="text" id="lastName" name="lastName" value="${(user.lastName!'')}"  class="Textinput" data-validation-rule="{required:true}" data-validation-message="{required:'이름을 입력해 주세요.'}">
-                                    <p class="color-red" data-for="lastName"></p>
-                                </td>
-							</tr>
-						</tbody>
+                        </tbody>
 					</table>
 				</fieldset>
 			</form>
