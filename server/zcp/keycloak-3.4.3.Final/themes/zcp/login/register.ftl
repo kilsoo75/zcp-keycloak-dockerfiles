@@ -22,7 +22,7 @@
                             <tr>
 								<th><strong class="astertisk">*</strong>아이디</th>
 								<td>
-                                    <input type="text" id="username" name="username" value="${(register.formData.username!'')}" autocomplete="username" class="Textinput" placeholder="" data-validation-rule="{required:true}" data-validation-message="{required:'아이디를 입력해 주세요.'}">
+                                    <input type="text" id="username" name="username" value="${(register.formData.username!'')}" autocomplete="username" class="Textinput" placeholder="" data-validation-rule="{required:true, numalpha:true}" data-validation-message="{required:'아이디를 입력해 주세요.'}">
                                     <p class="color-red" data-for="username"></p>
                                 </td>
 							</tr>
@@ -52,7 +52,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>비밀번호 확인</th>
+                                <th><strong class="astertisk">*</strong>비밀번호 확인</th>
                                 <td>
                                     <input type="password" id="password-confirm" name="password-confirm" class="Textinput" data-validation-rule="{required:true, passwordEqual:'testing'}"  data-validation-message="{required:'비밀번호 확인을 입력해 주세요.', passwordEqual:'두개의 비밀번호가 일치하지 않습니다.'}">
                                     <p class="color-red" data-for="password-confirm"></p>
