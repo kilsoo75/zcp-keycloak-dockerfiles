@@ -13,7 +13,7 @@
         </#list>
     </#if>
     <title>CloudZ CP</title>
-    <link rel="icon" href="${url.resourcesPath}/images/favicon.ico" />
+    <link rel="icon" href="${url.resourcesPath}/images/favicon_zcp.ico" />
     <#if properties.styles?has_content>
         <#list properties.styles?split(' ') as style>
             <link href="${url.resourcesPath}/${style}" rel="stylesheet" />
