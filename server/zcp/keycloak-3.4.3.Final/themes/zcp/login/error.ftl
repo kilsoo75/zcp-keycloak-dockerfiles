@@ -7,6 +7,6 @@
     </div>
 
     <#if client?? && client.baseUrl?has_content>
-        <div class="btn-wrap__center"><button class="Button btn-login gray" onclick="location.href='https://console.cloudzcp.io/k8s-login'" >${msg("backToApplication")?no_esc}</button></div>
+        <div class="btn-wrap__center"><button class="Button btn-login gray" onclick="location.href='https://console.cloudzcp.io/login'" >${msg("backToApplication")?no_esc}</button></div>
     </#if>
 </@layout.registrationLayout>

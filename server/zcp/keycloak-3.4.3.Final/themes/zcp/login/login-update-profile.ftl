@@ -27,14 +27,14 @@
                             <tr>
 								<th>이메일</th>
 								<td>
-                                    <input type="text" id="email" name="email" value="${(user.email!'')}" class="Textinput" data-validation-rule="{required:true, email:true}" data-validation-message="{required:'이메일을 입력해 주세요.'}">
+                                    <input type="text" id="email" name="email" value="${(user.email!'')}" class="Textinput" maxlength="100" data-keyfilter-rule="email" data-validation-rule="{required:true, email:true}" data-validation-message="{required:'이메일을 입력해 주세요.'}">
                                     <p class="color-red" data-for="email"></p>
                                 </td>
 							</tr>
                             <tr>
 								<th>이름</th>
 								<td>
-                                    <input type="text" id="firstName" name="firstName" value="${(user.firstName!'')}" class="Textinput" data-validation-rule="{required:true}" data-validation-message="{required:'이름을 입력해 주세요.'}">
+                                    <input type="text" id="firstName" name="firstName" value="${(user.firstName!'')}" class="Textinput" maxlength="100" data-validation-rule="{required:true}" data-validation-message="{required:'이름을 입력해 주세요.'}">
                                     <p class="color-red" data-for="firstName"></p>
                                 </td>
 							</tr>
@@ -52,4 +52,12 @@
 		<button class="Button btn-login gray" onclick="location.href='${url.loginRestartFlowUrl}'">취소</button>
 		<button class="Button btn-login" onclick="$('#kc-update-profile-form').submit();">확인</button>
 	</div>
+
+    <script type="text/javascript">
+        $.alopex.page(function() {
+            this.init = function(id, param) {
+                $a.keyfilter.addKeyUpRegexpRule("email", "a-zA-Z0-9@._-");
+            };
+        });
+    </script>
 </@layout.registrationLayout>

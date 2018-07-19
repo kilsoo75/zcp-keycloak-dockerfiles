@@ -330,10 +330,12 @@ body.login {background: #ffffff}
 }
 .btn-ico.del {background-position: -225px 0;}
 .btn-ico.del:hover, .btn-ico.del:active {background-position: -256px 0;}
-.btn-ico.list-add {background-position: -101px 0;}
-.btn-ico.list-add:hover, .btn-ico.list-add:active {background-position: -132px 0;}
-.btn-ico.list-del {background-position: -163px 0;}
-.btn-ico.list-del:hover, .btn-ico.list-del:active {background-position: -194px 0;}
+.btn-ico.list-add, .btn-ico.memory-plus {background-position: -101px 0;}
+.btn-ico.list-add:hover, .btn-ico.list-add:active,
+.btn-ico.memory-plus:hover, .btn-ico.memory-plus:active {background-position: -132px 0;}
+.btn-ico.list-del, .btn-ico.memory-minus {background-position: -163px 0;}
+.btn-ico.list-del:hover, .btn-ico.list-del:active,
+.btn-ico.memory-minus:hover, .btn-ico.memory-minus:active {background-position: -194px 0;}
 .btn-ico.copy-clip {background-position: -363px 2px;}
 .btn-ico.copy-clip:hover, .btn-ico.copy-clip:active {background-position: -392px 2px}
 .btn-ico.btn-viewdash {background-position: -198px -60px}
@@ -346,6 +348,11 @@ body.login {background: #ffffff}
 	height: 24px;
 	background-position: -386px -60px;
 }
+.btn-ico.btn-scale {
+	width: 24px;
+	height: 20px;
+	background-position: -228px -180px;
+}
 .btn-ico.btn-copy:hover, .btn-ico.btn-copy:hover:active {background-position: -416px -60px;}
 .btn-ico.channel-del {background-position: -295px 2px;}
 .btn-ico.channel-del:hover, .btn-ico.channel-del:active {background-position: -325px 2px;}
@@ -353,6 +360,26 @@ body.login {background: #ffffff}
 	width: 24px;
 	height: 24px;
 	background-position: -198px -118px;
+}
+.btn-ico.btn-log {background-position: 0 -180px;}
+.btn-ico.btn-refresh {background-position: -30px -180px;}
+.Button.btn-ico.btn-del__typeb, .btn-ico.btn-del__typeb {
+	background: transparent url("../images/ico-btn.png") no-repeat;
+	background-position: -282px -60px;
+}
+.Button.btn-ico.btn-del__typeb:hover, .Button.btn-ico.btn-del__typeb:active,
+.btn-ico.btn-del__typeb:hover, .btn-ico.btn-del__typeb:active {
+	background: transparent url("../images/ico-btn.png") no-repeat;
+	background-position: -318px -60px;
+}
+.Button.btn-ico.btn-config__save {background-position: -83px -179px;}
+.Button.btn-ico.btn-config__save:hover, .Button.btn-ico.btn-config__save:active {
+	background: transparent url("../images/ico-btn.png") no-repeat;
+	background-position: -124px -179px;
+}
+.Button.Disabled.btn-config__save, .Button.Disabled.btn-config__save:hover, .Button.Disabled.btn-config__save:active {
+	background: transparent url("../images/ico-btn.png") no-repeat;
+	background-position: -165px -179px;
 }
 .Textinput.acc-input {
 	width: 80%; 
@@ -412,14 +439,6 @@ body.login {background: #ffffff}
 	background: url("../images/ico-common.png") -46px -112px;
 }
 .ico-cloudz.db-plus + span {padding-left: 4px}
-.Button.nobg-btn {
-	text-indent: -9999px;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	-ms-border-radius: 0;
-	border-radius: 0;
-	background: transparent url("../images/btn-ico.png") no-repeat;
-}
 .Button.line-btn,
 .Button.line-btn:hover,
 .Button.line-btn:active {
@@ -436,11 +455,6 @@ body.login {background: #ffffff}
 }
 .Button.btn-spaceconfig {background-position: -315px -112px;}
 .Button.btn-spaceconfig:hover, .Button.btn-spaceconfig:active {background-position: -365px -112px;}
-.Button.btn-scale {
-	width: 24px;
-	height: 20px;
-	background-position: -92px -50px;
-}
 .Button.btn-ico__typeb.sm {
 	width: 30px;
 	height: 30px;
@@ -560,6 +574,7 @@ body.login {background: #ffffff}
 	color: #ea0530;
 }
 .info-text__typec {
+	margin-left: 20px;
 	font-size: 1.33rem;
 	color: #222222;
 }
@@ -900,7 +915,7 @@ a.blank-link {
 	color: #ea0530;
 }
 .service-logo, .service-info {float: left;}
-.service-logo {margin: 10px 10px 0 0;}
+.service-logo {margin: 0 10px 0 0;}
 .service-info .tag-wrap {margin-top: 8px;}
 .service-info dd {margin-top: 5px;}
 .service-info .service-user {
@@ -1101,6 +1116,34 @@ a.blank-link {
 	right: 5px;
 	background: url("../images/ico-btn.png") no-repeat -480px -2px;
 }
+.Textinput.input-pw {padding-right: 30px;}
+.btn-inputpw {
+	position: relative;
+	top: 2px;
+	left: -24px;
+	width: 24px;
+	height: 15px;
+	background: url("../images/ico-form.png") no-repeat right -27px;
+}
+.btn-input__wrap {
+	display: inline-block;
+	position: relative;
+	left: -20px;
+}
+.info-cnt__title {
+	margin-top: 5px;
+	width: 90px;
+	font-size: 1.07rem;
+	font-weight: bold;
+	color: #222222;
+}
+.info-cnt__title, .info-radio__wrap, .info-input__wrap {float: left;}
+.info-radio__wrap {
+	margin-top: 5px;
+	width: 330px;
+}
+.info-radio__wrap label {margin-right: 20px;}
+.info-input__wrap .Textinput {width: 500px;}
 /* name space */
 .namespace-sort {
 	position: relative;
@@ -1146,19 +1189,12 @@ a.blank-link {
 	border-radius: 0;
 }
 .Panel.service-panel {height: 150px;}
-.Panel.namespace-panel, .Panel.dash-panel {height: 230px;}
+.Panel.dash-panel {height: 230px;}
+.Panel.namespace-panel {height: 240px;}
 .Panel.service-panel.make-box, .Panel.namespace-panel.make-box {border-color: #eeeeee;}
 .Panel.service-panel .Panel-content, 
 .Panel.namespace-panel .Panel-content {padding: 16px 20px 20px;}
 .Panel.dash-panel .Panel-content {padding: 10px 16px;}
-.new-make {
-	display: block;
-	width: 100%;
-	height: 200px;
-	padding-top: 80px;
-	text-align: center;
-	font-size: 1.13rem;
-}
 .Icon.ico-cloudz.make-plus {
 	margin-left: 4px;
 	background: url("../images/ico-common.png") no-repeat -238px 0;
@@ -1171,8 +1207,8 @@ a.blank-link {
 }
 .namespace-info {
 	position: relative;
-	padding: 10px 0 20px;
-	margin-bottom: 20px;
+	padding: 10px 0 0;
+	margin-bottom: 10px;
 	border-bottom: 1px solid #dddddd;
 }
 .service-info dt,
@@ -1192,6 +1228,7 @@ a.blank-link {
 }
 .Label + .btn-ico.label-del {
 	position: relative;
+	top: -1px;
 	right: 12px;
 	width: 21px;
 	height: 22px;
@@ -1199,10 +1236,12 @@ a.blank-link {
 	font-family: "NotoKrR";
 	line-height: 20px;
 	background: #666666 url("../images/ico-btn.png") no-repeat -350px -65px;
+	border: 1px solid #666666;
 	-webkit-border-radius: 0 3px 3px 0;
 	-moz-border-radius: 0 3px 3px 0;
 	-ms-border-radius: 0 3px 3px 0;
 	border-radius: 0 3px 3px 0;
+	vertical-align: middle;
 }
 .Label.add-label {
 	cursor: pointer;
@@ -1260,7 +1299,7 @@ a.blank-link {
 .namespace-btn__wrap {
 	position: absolute;
 	right: 0;
-	bottom: 16px;
+	bottom: 10px;
 }
 .vline {
 	display: inline-block;
@@ -1278,14 +1317,17 @@ a.blank-link {
 }
 .name-progress__wrap li {
 	float: left;
-	padding-right: 4%;
-	width: 39%;
+	position: relative;
+	width: 50%;
+	margin-bottom: 10px;
 }
-.name-progress__wrap li:last-child {width: 15%;}
-.name-progress__wrap li:last-child .name-pro__title {text-align: center;}
 .name-pro__title {
+	display: block;
 	margin-bottom: 10px;
 	font-size: 0.87rem;
+}
+.name-progress__wrap .Progressbar {
+	width: calc(100% - 100px);
 }
 .Progressbar.name-typea,
 .Progressbar.name-typeb,
@@ -1306,16 +1348,28 @@ a.blank-link {
 .Progressbar.name-typed div {background: #169bd5;}
 .Progressbar.name-typee div {background: #ea0530;}
 .name-pro__info {
-	float: left;
-	position: relative;
-	top: -4px;
+	position: absolute;
+	top: 23px;
+	right: 0;
+	width: 100px;
+	padding-left: 10px;
 	font-size: 0.73rem;
-	margin-right: 10px;
 }
 .name-user__info {
-	display: block;
 	text-align: center;
 	margin-top: -4px;
+}
+.new-make {
+	display: block;
+	width: 100%;
+	height: 200px;
+	padding-top: 80px;
+	text-align: center;
+	font-size: 17px;
+}
+.Panel.service-panel.make-box .new-make {
+	height: 150px;
+	padding-top: 45px;
 }
 /* form layout common */
 .lay-item__box {
@@ -1348,6 +1402,7 @@ a.blank-link {
 	font-weight: 500;
 	border-top: 2px solid #444444;
 }
+.Tabs.db-tabs .form-title {margin-top: 40px;}
 .num-txt {
 	padding-left: 8px;
 	color: #666666;
@@ -1830,23 +1885,17 @@ a.view-detail:active {
 .control-btn:active {
 	background: url("../images/ico-common.png") no-repeat -463px -110px;
 }
-.Button.memory-minus {
+.btn-ico.memory-minus {
 	float: left;
 	position: relative;
 	left: -10px;
 	top: -8px;
-	width: 22px;
-	height: 22px;
-	background: url("../images/btn-ico.png") no-repeat -360px 0;
 }
-.Button.memory-plus {
+.btn-ico.memory-plus {
 	float: right;
 	position: relative;
 	right: -30px;
 	top: -15px;
-	width: 22px;
-	height: 22px;
-	background: url("../images/btn-ico.png") no-repeat -410px 0;
 }
 .info-wrap {margin-bottom: 10px}
 .progress-info {margin-top: 6px;}
@@ -1884,19 +1933,11 @@ a.view-detail:active {
 .service-btn__wrap {
 	position: absolute;
 	right: 12px;
-	bottom: 9px;
+	bottom: 20px;
 }
 .ico-cloudz.make-plus {
 	margin-left: 4px;
 	background-position: -238px 0;
-}
-.new-make {
-	display: block;
-	width: 100%;
-	height: 100px;
-	padding-top: 40px;
-	text-align: center;
-	font-size: 17px;
 }
 .contents-box.info-box {padding: 0;}
 .top-area.info-area {
@@ -1952,9 +1993,26 @@ a.view-detail:active {
 	font-size: 1.07rem;
 	color: #666666;
 }
-.info-list .Divselect,
-.info-list .Divselect:hover,
-.info-list .Divselect:active {border-color: #888888;}
+.config-title {
+	float: left;
+	margin-right: 6px;
+}
+.config-title + .onoff-wrap {
+	float: left;
+	margin-top: 4px;
+}
+.info-list__select {
+	float: right;
+}
+.info-list__select .Divselect,
+.info-list__select .Divselect:hover,
+.info-list__select .Divselect:active {
+	width: 150px;
+	height: 36px;
+	line-height: 28px;
+	border-color: #888888;
+	vertical-align: middle;
+}
 .ctn-info__right {float: right;}
 .info-db {
 	font-size: 20px;

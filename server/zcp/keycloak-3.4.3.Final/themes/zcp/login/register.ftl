@@ -22,7 +22,7 @@
                             <tr>
 								<th><strong class="astertisk">*</strong>아이디</th>
 								<td>
-                                    <input type="text" id="username" name="username" value="${(register.formData.username!'')}" autocomplete="username" class="Textinput" placeholder="" data-validation-rule="{required:true, numalpha:true}" data-validation-message="{required:'아이디를 입력해 주세요.'}">
+                                    <input type="text" id="username" name="username" value="${(register.formData.username!'')}" autocomplete="username" class="Textinput Width-60" maxlength="50" data-keyfilter-rule="digits|english" data-validation-rule="{required:true, numalpha:true}" data-validation-message="{required:'아이디를 입력해 주세요.'}">
                                     <p class="color-red" data-for="username"></p>
                                 </td>
 							</tr>
@@ -31,14 +31,14 @@
                             <tr>
                                 <th><strong class="astertisk">*</strong>이름</th>
                                 <td>
-                                    <input type="text" id="firstName" name="firstName" value="${(register.formData.firstName!'')}" class="Textinput" placeholder="" data-validation-rule="{required:true}" data-validation-message="{required:'이름을 입력해 주세요.'}">
+                                    <input type="text" id="firstName" name="firstName" value="${(register.formData.firstName!'')}" class="Textinput Width-60" maxlength="100" placeholder="" data-validation-rule="{required:true}" data-validation-message="{required:'이름을 입력해 주세요.'}">
                                     <p class="color-red" data-for="firstName"></p>
                                 </td>
                             </tr>
                             <tr>
                                 <th><strong class="astertisk">*</strong>이메일</th>
                                 <td>
-                                    <input type="text" id="email" name="email" value="${(register.formData.email!'')}" autocomplete="email" class="Textinput" placeholder="" data-validation-rule="{required:true, email:true}" data-validation-message="{required:'이메일을 입력해 주세요.'}">
+                                    <input type="text" id="email" name="email" value="${(register.formData.email!'')}" autocomplete="email" class="Textinput Width-60" maxlength="100" data-keyfilter-rule="email" placeholder="" data-validation-rule="{required:true, email:true}" data-validation-message="{required:'이메일을 입력해 주세요.'}">
                                     <p class="color-red" data-for="email"></p>
                                 </td>
                             </tr>
@@ -47,14 +47,14 @@
                             <tr>
                                 <th><strong class="astertisk">*</strong>비밀번호</th>
                                 <td>
-                                    <input type="password" id="password" name="password" autocomplete="new-password" class="Textinput" placeholder="" data-validation-rule="{required:true, rangelength:[6,12], numalpha:true}" data-validation-message="{required:'비밀번호를 입력해 주세요.'}">
+                                    <input type="password" id="password" name="password" autocomplete="new-password" class="Textinput" placeholder="" maxlength="12" data-validation-rule="{required:true, rangelength:[6,12], numalpha:true}" data-validation-message="{required:'비밀번호를 입력해 주세요.'}">
                                     <p class="color-red" data-for="password"></p>
                                 </td>
                             </tr>
                             <tr>
                                 <th><strong class="astertisk">*</strong>비밀번호 확인</th>
                                 <td>
-                                    <input type="password" id="password-confirm" name="password-confirm" class="Textinput" data-validation-rule="{required:true, passwordEqual:'testing'}"  data-validation-message="{required:'비밀번호 확인을 입력해 주세요.', passwordEqual:'두개의 비밀번호가 일치하지 않습니다.'}">
+                                    <input type="password" id="password-confirm" name="password-confirm" class="Textinput" maxlength="12" data-validation-rule="{required:true, passwordEqual:'testing'}"  data-validation-message="{required:'비밀번호 확인을 입력해 주세요.', passwordEqual:'두개의 비밀번호가 일치하지 않습니다.'}">
                                     <p class="color-red" data-for="password-confirm"></p>
                                 </td>
                             </tr>
@@ -78,6 +78,8 @@
     <script type="text/javascript">
         $.alopex.page(function() {
             this.init = function(id, param) {
+                $a.keyfilter.addKeyUpRegexpRule("email", "a-zA-Z0-9@._-");
+
                 Validator.addMethod('passwordEqual', function(element, value, param) {
                     var password = $("#password").val();
                     if (value === password) {
