@@ -27,7 +27,7 @@
                             <tr>
 								<th>이메일</th>
 								<td>
-                                    <input type="text" id="email" name="email" value="${(user.email!'')}" class="Textinput" maxlength="100" data-keyfilter-rule="email" data-validation-rule="{required:true, email:true}" data-validation-message="{required:'이메일을 입력해 주세요.'}">
+                                    <input type="text" id="email" name="email" value="${(user.email!'')}" class="Textinput" maxlength="100" data-keyfilter-rule="email" data-validation-rule="{required:true, email:true}" data-validation-message="{required:'이메일을 입력해 주세요.'}" >
                                     <p class="color-red" data-for="email"></p>
                                 </td>
 							</tr>

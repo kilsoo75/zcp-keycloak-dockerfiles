@@ -15,14 +15,14 @@
                             <tr>
 								<th>새 비밀번호</th>
 								<td>
-                                    <input type="password" id="password-new" name="password-new" class="Textinput" autofocus autocomplete="new-password" maxlength="12" data-validation-rule="{required:true, rangelength:[6,12], numalpha:true}" data-validation-message="{required:'비밀번호를 입력해 주세요.'}">
+                                    <input type="password" id="password-new" name="password-new" class="Textinput" autofocus autocomplete="new-password" maxlength="20" data-keyfilter-rule="digits|english" data-keyfilter="!@#$%^*_-" data-validation-rule="{required:true, passwordSecuity:true}" data-validation-message="{required:'비밀번호를 입력해 주세요.', passwordSecuity:'알파벳, 특수문자, 숫자를 포함하여 8~20자 사이로 입력하세요.'}">
                                     <p class="color-red" data-for="password-new"></p>
                                 </td>
 							</tr>
                             <tr>
 								<th>비밀번호 확인</th>
 								<td>
-                                    <input type="password" id="password-confirm" name="password-confirm" class="Textinput" autocomplete="new-password" maxlength="12" data-validation-rule="{required:true, passwordEqual:'testing'}"  data-validation-message="{required:'비밀번호 확인을 입력해 주세요.', passwordEqual:'두개의 비밀번호가 일치하지 않습니다.'}">
+                                    <input type="password" id="password-confirm" name="password-confirm" class="Textinput" autocomplete="new-password" maxlength="20" data-validation-rule="{required:true, passwordEqual:'testing'}"  data-validation-message="{required:'비밀번호 확인을 입력해 주세요.', passwordEqual:'두개의 비밀번호가 일치하지 않습니다.'}">
                                     <p class="color-red" data-for="password-confirm"></p>
                                 </td>
 							</tr>
@@ -52,6 +52,11 @@
                     } else {
                         return false;
                     }
+                });
+
+                Validator.addMethod('passwordSecuity', function(element, value, param) {
+                    var newPassword = $("#password-new").val();
+                    return chkPwd(newPassword);
                 });
             };
         });

@@ -11,7 +11,7 @@
 			<fieldset>
 				<dl class="login-form email">
 					<dt>이메일 주소</dt>
-					<dd><input type="text" id="username" name="username" class="Textinput" maxlength="100" data-keyfilter-rule="email" placeholder="등록된 이메일 주소를 입력해주세요." data-validation-rule="{required : true, email: true}" data-validation-message="{required:'이메일을 입력해 주세요.'}" autofocus ></dd>
+					<dd><input type="text" id="username" name="username" class="Textinput" maxlength="100" data-keyfilter-rule="email" data-validation-rule="{required : true, email: true}" data-validation-message="{required:'이메일을 입력해 주세요.'}" autofocus ></dd>
 					<dd class="pwinfo" data-for="username"></dd>
 				</dl>
 			</fieldset>

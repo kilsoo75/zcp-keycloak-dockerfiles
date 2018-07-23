@@ -37,7 +37,7 @@
             </fieldset>
         </form>
     </div>
-    <div class="btn-wrap__center"><button tabindex="4" class="Button btn-login" onclick="$('#kc-form-login').submit();">로그인</button></div>
+    <div class="btn-wrap__center"><button tabindex="4" class="Button btn-login" onclick="javascript:login()">로그인</button></div>
     <!--//login contents-->
     <div class="login-menu">
         <ul class="login-list">
@@ -77,6 +77,15 @@
                 });
             };
         });
+
+        var isLoginSubmit = false;
+        function login() {
+            console.log(' isLoginSubmit : ' + isLoginSubmit);
+            if (!isLoginSubmit) {
+                $('#kc-form-login').submit();
+                //isLoginSubmit = true;
+            }
+        }
     </script>
 
 </@layout.registrationLayout>

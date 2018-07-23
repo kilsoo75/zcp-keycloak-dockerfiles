@@ -22,7 +22,7 @@
                             <tr>
 								<th><strong class="astertisk">*</strong>아이디</th>
 								<td>
-                                    <input type="text" id="username" name="username" value="${(register.formData.username!'')}" autocomplete="username" class="Textinput Width-60" maxlength="50" data-keyfilter-rule="digits|english" data-validation-rule="{required:true, numalpha:true}" data-validation-message="{required:'아이디를 입력해 주세요.'}">
+                                    <input type="text" id="username" name="username" value="${(register.formData.username!'')}" autocomplete="username" class="Textinput Width-60" maxlength="50" data-keyfilter-rule="digits|english" data-validation-rule="{required:true, numalpha:true}" data-validation-message="{required:'아이디를 입력해 주세요.'}" autofocus>
                                     <p class="color-red" data-for="username"></p>
                                 </td>
 							</tr>
@@ -47,14 +47,14 @@
                             <tr>
                                 <th><strong class="astertisk">*</strong>비밀번호</th>
                                 <td>
-                                    <input type="password" id="password" name="password" autocomplete="new-password" class="Textinput" placeholder="" maxlength="12" data-validation-rule="{required:true, rangelength:[6,12], numalpha:true}" data-validation-message="{required:'비밀번호를 입력해 주세요.'}">
+                                    <input type="password" id="password" name="password" autocomplete="new-password" class="Textinput" maxlength="20" data-keyfilter-rule="digits|english" data-keyfilter="!@#$%^*_-" data-validation-rule="{required:true, passwordSecuity:true}" data-validation-message="{required:'비밀번호를 입력해 주세요.', passwordSecuity:'알파벳, 특수문자, 숫자를 포함하여 8~20자 사이로 입력하세요.'}">
                                     <p class="color-red" data-for="password"></p>
                                 </td>
                             </tr>
                             <tr>
                                 <th><strong class="astertisk">*</strong>비밀번호 확인</th>
                                 <td>
-                                    <input type="password" id="password-confirm" name="password-confirm" class="Textinput" maxlength="12" data-validation-rule="{required:true, passwordEqual:'testing'}"  data-validation-message="{required:'비밀번호 확인을 입력해 주세요.', passwordEqual:'두개의 비밀번호가 일치하지 않습니다.'}">
+                                    <input type="password" id="password-confirm" name="password-confirm" class="Textinput" maxlength="20" data-validation-rule="{required:true, passwordEqual:'testing'}"  data-validation-message="{required:'비밀번호 확인을 입력해 주세요.', passwordEqual:'두개의 비밀번호가 일치하지 않습니다.'}">
                                     <p class="color-red" data-for="password-confirm"></p>
                                 </td>
                             </tr>
@@ -87,6 +87,11 @@
                     } else {
                         return false;
                     }
+                });
+
+                Validator.addMethod('passwordSecuity', function(element, value, param) {
+                    var newPassword = $("#password").val();
+                    return chkPwd(newPassword);
                 });
             };
         });

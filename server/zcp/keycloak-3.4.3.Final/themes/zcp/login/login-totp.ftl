@@ -11,7 +11,7 @@
             <fieldset>
                 <dl class="login-form email">
                     <dt>인증번호</dt>
-                    <dd><input  type="text" id="totp" name="totp" autocomplete="off"class="Textinput" placeholder="인증번호를 입력해주세요." autofocus></dd>
+                    <dd><input  type="text" id="totp" name="totp" autocomplete="off"class="Textinput" autofocus></dd>
 
                     <#if message?has_content>
                         <dd class="pwinfo">${message.summary?no_esc}</dd>
