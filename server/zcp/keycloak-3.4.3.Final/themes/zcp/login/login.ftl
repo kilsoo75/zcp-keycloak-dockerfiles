@@ -80,10 +80,9 @@
 
         var isLoginSubmit = false;
         function login() {
-            console.log(' isLoginSubmit : ' + isLoginSubmit);
             if (!isLoginSubmit) {
                 $('#kc-form-login').submit();
-                //isLoginSubmit = true;
+                isLoginSubmit = true;
             }
         }
     </script>
