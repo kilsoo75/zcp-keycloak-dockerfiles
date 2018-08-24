@@ -52,7 +52,7 @@ function chkPwd(str) {
 	var pw = str;
 	var num = pw.search(/[0-9]/g);
 	var eng = pw.search(/[a-z]/ig);
-	var spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
+	var spe = pw.search(/[!@#$%^*_-]/gi);
 
 	if (pw.length < 8 || pw.length > 20) {
 		return false;
