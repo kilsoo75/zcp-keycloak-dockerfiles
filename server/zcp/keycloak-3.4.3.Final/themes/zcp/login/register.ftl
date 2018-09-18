@@ -47,7 +47,7 @@
                             <tr>
                                 <th><strong class="astertisk">*</strong>비밀번호</th>
                                 <td>
-                                    <input type="password" id="password" name="password" autocomplete="new-password" class="Textinput" maxlength="20" data-keyfilter-rule="digits|english" data-keyfilter="!@#$%^*_-" data-validation-rule="{required:true, passwordSecuity:true}" data-validation-message="{required:'비밀번호를 입력해 주세요.', passwordSecuity:'알파벳, 특수문자, 숫자를 포함하여 8~20자 사이로 입력하세요.'}">
+                                    <input type="password" id="password" name="password" autocomplete="new-password" class="Textinput" maxlength="20" data-keyfilter-rule="digits|english" data-keyfilter="!@#$%^*_-" data-validation-rule="{required:true, passwordSecuity:true}" data-validation-message="{required:'비밀번호를 입력해 주세요.', passwordSecuity:'대문자 1자, 소문자 1자, 숫자 1자를 포함하여 8~20자 사이로 입력하세요.'}">
                                     <p class="color-red" data-for="password"></p>
                                 </td>
                             </tr>
