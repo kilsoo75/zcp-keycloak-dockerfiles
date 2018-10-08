@@ -57,7 +57,7 @@
 
             <li>
                 <p class="list-text">서비스 이용에<br>도움이 필요하신가요?</p>
-                <button class="Button btn-makeid">문의 및 지원</button>
+                <button class="Button btn-makeid" onclick="location.href='https://support.cloudz.co.kr/ko/support/solutions'">문의 및 지원</button>
             </li>
         </ul>
     </div>
