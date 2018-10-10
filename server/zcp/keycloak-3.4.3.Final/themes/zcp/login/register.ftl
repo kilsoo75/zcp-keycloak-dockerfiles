@@ -22,7 +22,7 @@
                             <tr>
 								<th><strong class="astertisk">*</strong>아이디</th>
 								<td>
-                                    <input type="text" id="username" name="username" value="${(register.formData.username!'')}" autocomplete="username" class="Textinput Width-60" maxlength="50" data-keyfilter="-_." data-keyfilter-rule="digits|english" data-validation-rule="{required:true}" data-validation-message="{required:'아이디를 입력해 주세요.'}" autofocus>
+                                    <input type="text" id="username" name="username" value="${(register.formData.username!'')}" autocomplete="username" class="Textinput Width-60" maxlength="50" data-keyfilter="-." data-keyfilter-rule="digits|english" data-validation-rule="{required:true}" data-validation-message="{required:'아이디를 입력해 주세요.'}" autofocus>
                                     <p class="color-red" data-for="username"></p>
                                 </td>
 							</tr>
